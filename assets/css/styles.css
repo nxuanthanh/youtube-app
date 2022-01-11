@@ -18,6 +18,29 @@ a {
   color: #a8a8a8;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #212121;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  height: 80px;
+  background: #c5c5c5;
+}
+
+.app {
+  overflow: hidden;
+}
+
+.app__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .app .header {
   position: fixed;
   left: 0;
@@ -213,6 +236,7 @@ a {
   margin-top: 56px;
   position: fixed;
   z-index: 5;
+  width: 24rem;
 }
 
 .app .sidebar::-webkit-scrollbar {
@@ -223,7 +247,7 @@ a {
 .app .sidebar::-webkit-scrollbar-thumb {
   border-radius: 10px;
   height: 80px;
-  background: #c5c5c5;
+  background: #717171;
 }
 
 .app .sidebar__list {
@@ -309,7 +333,7 @@ a {
 }
 
 .app .content {
-  margin-left: 16.66667%;
+  margin-left: 24rem;
   margin-top: 56px;
 }
 
@@ -368,8 +392,8 @@ a {
   color: #fff;
 }
 
-.app .content .video__container {
-  margin-top: 5.6rem;
+.app .content .video__section {
+  margin: 80px 12px 0 12px;
 }
 
 .app .content .video__item {

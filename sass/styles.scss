@@ -21,7 +21,25 @@ $secondary-color: #202020;
 $white-color: #fff;
 $categories-height: 5.6rem;
 
+body {
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #212121;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 80px;
+    background: #c5c5c5;
+  }
+}
 .app {
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .header {
     position: fixed;
     left: 0;
@@ -170,15 +188,17 @@ $categories-height: 5.6rem;
     margin-top: 56px;
     position: fixed;
     z-index: 5;
+    width: 24rem;
 
     &::-webkit-scrollbar {
       width: 8px;
       background-color: #212121;
     }
+
     &::-webkit-scrollbar-thumb {
       border-radius: 10px;
       height: 80px;
-      background: #c5c5c5;
+      background: #717171;
     }
 
     &__list {
@@ -257,7 +277,7 @@ $categories-height: 5.6rem;
   }
 
   .content {
-    margin-left: 16.66667%;
+    margin-left: 24rem;
     margin-top: 56px;
 
     .categories {
@@ -310,11 +330,8 @@ $categories-height: 5.6rem;
     }
 
     .video {
-      &__container {
-        margin-top: $categories-height;
-      }
-
       &__section {
+        margin: 80px 12px 0 12px;
       }
 
       &__item {
