@@ -5,19 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Youtube</title>
-    <link
-      rel="shortcut icon"
-      href="./assets/images/youtube-icon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./assets/images/youtube-icon.png" type="image/x-icon" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Spline+Sans:wght@300&display=swap"
       rel="stylesheet"
@@ -41,12 +34,7 @@
                   preserveAspectRatio="xMidYMid meet"
                   focusable="false"
                   class="style-scope yt-icon header__navbar--logo-icon"
-                  style="
-                    pointer-events: none;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                  "
+                  style="pointer-events: none; display: block; width: 100%; height: 100%"
                 >
                   <g
                     viewBox="0 0 90 20"
@@ -104,11 +92,7 @@
             <div class="header__navbar--middle">
               <div class="header__navbar--input-box">
                 <div class="header__navbar--input-search">
-                  <input
-                    type="text"
-                    class="inputSearch"
-                    placeholder="Tìm kiếm"
-                  />
+                  <input type="text" class="inputSearch" placeholder="Tìm kiếm" />
                 </div>
                 <div class="header__navbar--input-btn">
                   <button type="submit" class="btn btn-search">
@@ -140,7 +124,33 @@
             </div>
           </div>
         </div>
-        <div class="sidebar">
+        <div class="sidebar show">
+          <ul class="sidebar__list-sm">
+            <li class="sidebar__item active">
+              <a href="#" class="sidebar__item--link">
+                <ion-icon name="home" class="visible"></ion-icon>
+                <p class="sidebar__item--title">Trang chủ</p>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__item--link">
+                <ion-icon name="compass-outline" class="visible"></ion-icon>
+                <p class="sidebar__item--title">Khám phá</p>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__item--link">
+                <ion-icon name="cash-outline" class="visible"></ion-icon>
+                <p class="sidebar__item--title">Kênh đăng ký</p>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__item--link">
+                <ion-icon name="duplicate-outline" class="visible"></ion-icon>
+                <p class="sidebar__item--title">Thư viện</p>
+              </a>
+            </li>
+          </ul>
           <ul class="sidebar__list">
             <li class="sidebar__item active">
               <a href="#" class="sidebar__item--link">
@@ -198,14 +208,11 @@
               </a>
             </li>
             <div class="separator"></div>
-            <h1>Kênh đăng kí</h1>
+            <h1 class="sidebar__item--title">Kênh đăng kí</h1>
             <li class="sidebar__item">
               <a href="#" class="sidebar__item--link">
                 <img src="./assets/images/channel__sub-icon.jpg" alt="" />
                 <p class="sidebar__item--title">Mixigaming</p>
-                <div class="stream_icon">
-                  <ion-icon name="radio-outline" class="stream_icon"></ion-icon>
-                </div>
               </a>
             </li>
             <li class="sidebar__item">
@@ -224,9 +231,6 @@
               <a href="#" class="sidebar__item--link">
                 <img src="./assets/images/ielts.jpg" alt="" />
                 <p class="sidebar__item--title">IELTS Fighter</p>
-                <div class="stream_icon">
-                  <ion-icon name="radio-outline" class="stream_icon"></ion-icon>
-                </div>
               </a>
             </li>
             <li class="sidebar__item">
@@ -234,9 +238,6 @@
                 <img src="./assets/images/megame.jpg" alt="" />
 
                 <p class="sidebar__item--title">meGAME</p>
-                <div class="stream_icon">
-                  <ion-icon name="radio-outline" class="stream_icon"></ion-icon>
-                </div>
               </a>
             </li>
             <li class="sidebar__item">
@@ -275,7 +276,7 @@
               </a>
             </li>
             <div class="separator"></div>
-            <h1>Dịch vụ khác của Youtube</h1>
+            <h1 class="sidebar__topic">Dịch vụ khác của Youtube</h1>
             <li class="sidebar__item">
               <a href="#" class="sidebar__item--link">
                 <ion-icon name="game-controller-outline"></ion-icon>
@@ -314,22 +315,24 @@
               </a>
             </li>
             <div class="separator"></div>
-            <div class="info">
-              <a href="" class="info__link"> Giới thiệu </a>
-              <a href="" class="info__link"> Báo chí </a>
-              <a href="" class="info__link"> Bản quyền </a>
-              <a href="" class="info__link"> Liên hệ với chúng tôi </a>
-              <a href="" class="info__link"> Người sáng tạo </a>
-              <a href="" class="info__link"> Quảng cáo </a>
-              <a href="" class="info__link"> Nhà phát triển </a>
-            </div>
+            <div class="page__info">
+              <div class="info">
+                <a href="" class="info__link"> Giới thiệu </a>
+                <a href="" class="info__link"> Báo chí </a>
+                <a href="" class="info__link"> Bản quyền </a>
+                <a href="" class="info__link"> Liên hệ với chúng tôi </a>
+                <a href="" class="info__link"> Người sáng tạo </a>
+                <a href="" class="info__link"> Quảng cáo </a>
+                <a href="" class="info__link"> Nhà phát triển </a>
+              </div>
 
-            <div class="info">
-              <a href="" class="info__link"> Đièu khoản </a>
-              <a href="" class="info__link"> Quyên riêng tư </a>
-              <a href="" class="info__link"> Chính sách và an toàn </a>
-              <a href="" class="info__link"> Cách youtube hoạt động </a>
-              <a href="" class="info__link"> Thử các tính năng mới </a>
+              <div class="info">
+                <a href="" class="info__link"> Điều khoản </a>
+                <a href="" class="info__link"> Quyên riêng tư </a>
+                <a href="" class="info__link"> Chính sách và an toàn </a>
+                <a href="" class="info__link"> Cách youtube hoạt động </a>
+                <a href="" class="info__link"> Thử các tính năng mới </a>
+              </div>
             </div>
 
             <div class="guide__renderer">
@@ -357,16 +360,11 @@
               <div class="col l-3 m-4 video__item"></div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="2:04" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/thumbnail.png"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/thumbnail.png" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img
-                      src="./assets/images/yellow.jpg"
-                      alt=""
-                      class="channel__icon-img"
+                    ><img src="./assets/images/yellow.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
                     <a href="" class="video__title">Bad Guy [ Number Five ]</a>
@@ -380,9 +378,7 @@
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="41:08" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/mixiThumbnail.webp"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/mixiThumbnail.webp" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
@@ -393,8 +389,8 @@
                   /></a>
                   <div class="video__details">
                     <a href="" class="video__title"
-                      >(Scribble It!) Cuộc thi tìm kiếm tài năng hội họa và bức
-                      vẽ làm nên tên tuổi của Họa Sĩ Cao Bằng.</a
+                      >(Scribble It!) Cuộc thi tìm kiếm tài năng hội họa và bức vẽ làm nên tên tuổi
+                      của Họa Sĩ Cao Bằng.</a
                     >
                     <a href="" class="video__channel-name">Mixigaming</a>
                     <div class="video__metadata">
@@ -406,27 +402,17 @@
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="6:50" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/real.webp"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/real.webp" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img
-                      src="./assets/images/laliga.jpg"
-                      alt=""
-                      class="channel__icon-img"
+                    ><img src="./assets/images/laliga.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
-                    <a href="" class="video__title"
-                      >TOP 10 GOLES LaLiga Santander 2021</a
-                    >
+                    <a href="" class="video__title">TOP 10 GOLES LaLiga Santander 2021</a>
                     <a href="" class="video__channel-name"
                       >LaLiga Santander
-                      <ion-icon
-                        name="checkmark-circle"
-                        class="icon-checkmark"
-                      ></ion-icon>
+                      <ion-icon name="checkmark-circle" class="icon-checkmark"></ion-icon>
                     </a>
                     <div class="video__metadata">
                       <span class="video__view">1.2M View</span>
@@ -437,21 +423,15 @@
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="8:27" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/playah.webp"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/playah.webp" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img
-                      src="./assets/images/soobin.jpg"
-                      alt=""
-                      class="channel__icon-img"
+                    ><img src="./assets/images/soobin.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
                     <a href="" class="video__title"
-                      >SOOBIN X SLIMV - THE PLAYAH (Special Performance /
-                      Official Music Video)</a
+                      >SOOBIN X SLIMV - THE PLAYAH (Special Performance / Official Music Video)</a
                     >
                     <a href="" class="video__channel-name"
                       >SOOBIN Official
@@ -466,21 +446,16 @@
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="12:24" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/dungct.webp"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/dungct.webp" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img
-                      src="./assets/images/ttgame.jpg"
-                      alt=""
-                      class="channel__icon-img"
+                    ><img src="./assets/images/ttgame.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
                     <a href="" class="video__title"
-                      >Internet Cafe Simulator 2 - THUÊ VỆ SĨ VỀ TRÔNG QUÁN NET
-                      !!! Giờ đứa nào dám quịt tiền =))))</a
+                      >Internet Cafe Simulator 2 - THUÊ VỆ SĨ VỀ TRÔNG QUÁN NET !!! Giờ đứa nào dám
+                      quịt tiền =))))</a
                     >
                     <a href="" class="video__channel-name"
                       >Trực Tiếp Game<ion-icon
@@ -497,16 +472,11 @@
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="3:55" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/tunaThumb.jpg"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/tunaThumb.jpg" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img
-                      src="./assets/images/tuna.jpg"
-                      alt=""
-                      class="channel__icon-img"
+                    ><img src="./assets/images/tuna.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
                     <a href="" class="video__title"
@@ -522,21 +492,15 @@
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="12:24" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/lòi.jpg"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/lòi.jpg" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img
-                      src="./assets/images/lofiChannel.jpg"
-                      alt=""
-                      class="channel__icon-img"
+                    ><img src="./assets/images/lofiChannel.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
                     <a href="" class="video__title"
-                      >jazz/lofi hip hop radio🌱chill beats to relax/study to
-                      [LIVE 24/7]</a
+                      >jazz/lofi hip hop radio🌱chill beats to relax/study to [LIVE 24/7]</a
                     >
                     <a href="" class="video__channel-name">阿鲍Abao</a>
                     <div class="video__metadata">
@@ -550,21 +514,14 @@
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="13:10" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/api.jpg"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/api.jpg" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img
-                      src="./assets/images/fireship.jpg"
-                      alt=""
-                      class="channel__icon-img"
+                    ><img src="./assets/images/fireship.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
-                    <a href="" class="video__title"
-                      >Make Money from your API Tutorial</a
-                    >
+                    <a href="" class="video__title">Make Money from your API Tutorial</a>
                     <a href="" class="video__channel-name">Fireship</a>
                     <div class="video__metadata">
                       <span class="video__view">377K View</span>
@@ -575,21 +532,15 @@
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="7:59" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/metro.jpg"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/metro.jpg" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img
-                      src="./assets/images/spideroom.jpg"
-                      alt=""
-                      class="channel__icon-img"
+                    ><img src="./assets/images/spideroom.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
                     <a href="" class="video__title"
-                      >Dầu mỏ quan trọng với thế giới như thế nào? | Nhện Tri
-                      Thức | SPIDERUM</a
+                      >Dầu mỏ quan trọng với thế giới như thế nào? | Nhện Tri Thức | SPIDERUM</a
                     >
                     <a href="" class="video__channel-name">Spiderum</a>
                     <div class="video__metadata">
@@ -601,21 +552,15 @@
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="40:01" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/china.jpg"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/china.jpg" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img
-                      src="./assets/images/vifacts.jpg"
-                      alt=""
-                      class="channel__icon-img"
+                    ><img src="./assets/images/vifacts.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
                     <a href="" class="video__title"
-                      >#016: [FULL] Những Sự Thật Hú Hồn Về Đất Nước Trung Quốc!
-                      😱😱😱</a
+                      >#016: [FULL] Những Sự Thật Hú Hồn Về Đất Nước Trung Quốc! 😱😱😱</a
                     >
                     <a href="" class="video__channel-name">VFacts</a>
                     <div class="video__metadata">
@@ -627,25 +572,17 @@
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="13:42" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/cang.jpg"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/cang.jpg" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img
-                      src="./assets/images/bactery.jpg"
-                      alt=""
-                      class="channel__icon-img"
+                    ><img src="./assets/images/bactery.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
                     <a href="" class="video__title"
-                      >LỊCH SỬ QUÂN CẢNG CAM RANH - NHỮNG BÍ MẬT KHÔNG PHẢI AI
-                      CŨNG BIẾT</a
+                      >LỊCH SỬ QUÂN CẢNG CAM RANH - NHỮNG BÍ MẬT KHÔNG PHẢI AI CŨNG BIẾT</a
                     >
-                    <a href="" class="video__channel-name"
-                      >BATTLECRY - NGƯỜI KỂ SỬ</a
-                    >
+                    <a href="" class="video__channel-name">BATTLECRY - NGƯỜI KỂ SỬ</a>
                     <div class="video__metadata">
                       <span class="video__view">83K View</span>
                       <span>10days ago</span>
@@ -655,21 +592,14 @@
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="7:06" class="video__thumbnail"
-                  ><img
-                    src="./assets/images/foot.jpg"
-                    class="video__thumbnail-img"
+                  ><img src="./assets/images/foot.jpg" class="video__thumbnail-img"
                 /></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img
-                      src="./assets/images/dratteling.jpg"
-                      alt=""
-                      class="channel__icon-img"
+                    ><img src="./assets/images/dratteling.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
-                    <a href="" class="video__title"
-                      >Tinh Hoa Đồ Ăn Bẩn | DraTelling</a
-                    >
+                    <a href="" class="video__title">Tinh Hoa Đồ Ăn Bẩn | DraTelling</a>
                     <a href="" class="video__channel-name">DraTelling</a>
                     <div class="video__metadata">
                       <span class="video__view">2.3M View</span>

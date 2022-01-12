@@ -84,7 +84,7 @@ body {
 
       &::before {
         position: absolute;
-        content: "VN";
+        content: 'VN';
         color: #aaa;
         top: 14px;
         right: 2px;
@@ -183,16 +183,34 @@ body {
   }
 
   .sidebar {
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
     overflow-y: auto;
     margin-top: 56px;
-    position: fixed;
     z-index: 5;
-    width: 24rem;
+    width: 72px;
+
+    &:hover {
+      &::-webkit-scrollbar {
+        display: block;
+      }
+    }
+
+    &.show {
+      width: 24rem;
+      & ~ .content {
+        margin-left: 24rem;
+        margin-top: 56px;
+        width: calc(100% - 24rem);
+      }
+    }
 
     &::-webkit-scrollbar {
       width: 8px;
       background-color: #212121;
+      display: none;
     }
 
     &::-webkit-scrollbar-thumb {
@@ -221,11 +239,35 @@ body {
       }
     }
 
+    &__list-sm {
+      padding-top: 2px;
+      background-color: #212121;
+      height: 100%;
+      & .sidebar__item {
+        display: block;
+        padding: 16px 0 14px;
+
+        &--link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .visible {
+            margin: 0 0 6px;
+          }
+        }
+
+        &--title {
+          font-size: 1rem;
+        }
+      }
+    }
+
     &__item {
       display: flex;
       align-items: center;
       padding: 0 24px;
-      height: 40px;
       width: 98.5%;
 
       &:hover {
@@ -241,6 +283,7 @@ body {
       display: flex;
       align-items: center;
       font-size: 13.5px;
+      height: 40px;
       color: $white-color;
 
       & ion-icon {
@@ -253,11 +296,6 @@ body {
         height: 24px;
         border-radius: 50%;
         margin-right: 24px;
-      }
-
-      & .stream_icon {
-        font-size: 14px;
-        color: red;
       }
     }
 
@@ -277,8 +315,10 @@ body {
   }
 
   .content {
-    margin-left: 24rem;
+    margin-left: 7.2rem;
     margin-top: 56px;
+    width: calc(100% - 7.2rem);
+    transition: all 50ms ease;
 
     .categories {
       width: 100%;
@@ -359,7 +399,7 @@ body {
           position: absolute;
           right: 5px;
           bottom: 5px;
-          padding: 0.1em 0.3em;
+          padding: 0.3em 0.5em;
           background: rgba(0, 0, 0, 0.85);
           color: $white-color;
           border-radius: 0.3em;
@@ -419,7 +459,7 @@ body {
 
       &__view {
         &::after {
-          content: "•";
+          content: '•';
           margin: 0 4px;
         }
       }

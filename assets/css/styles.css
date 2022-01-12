@@ -101,7 +101,7 @@ body::-webkit-scrollbar-thumb {
 
 .app .header__navbar--logo::before {
   position: absolute;
-  content: "VN";
+  content: 'VN';
   color: #aaa;
   top: 14px;
   right: 2px;
@@ -231,17 +231,34 @@ body::-webkit-scrollbar-thumb {
 }
 
 .app .sidebar {
-  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
   overflow-y: auto;
   margin-top: 56px;
-  position: fixed;
   z-index: 5;
+  width: 72px;
+}
+
+.app .sidebar:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.app .sidebar.show {
   width: 24rem;
+}
+
+.app .sidebar.show ~ .content {
+  margin-left: 24rem;
+  margin-top: 56px;
+  width: calc(100% - 24rem);
 }
 
 .app .sidebar::-webkit-scrollbar {
   width: 8px;
   background-color: #212121;
+  display: none;
 }
 
 .app .sidebar::-webkit-scrollbar-thumb {
@@ -270,6 +287,41 @@ body::-webkit-scrollbar-thumb {
   color: #aaa;
 }
 
+.app .sidebar__list-sm {
+  padding-top: 2px;
+  background-color: #212121;
+  height: 100%;
+}
+
+.app .sidebar__list-sm .sidebar__item {
+  display: block;
+  padding: 16px 0 14px;
+}
+
+.app .sidebar__list-sm .sidebar__item--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .sidebar__list-sm .sidebar__item--link .visible {
+  margin: 0 0 6px;
+}
+
+.app .sidebar__list-sm .sidebar__item--title {
+  font-size: 1rem;
+}
+
 .app .sidebar__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -278,7 +330,6 @@ body::-webkit-scrollbar-thumb {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 24px;
-  height: 40px;
   width: 98.5%;
 }
 
@@ -298,6 +349,7 @@ body::-webkit-scrollbar-thumb {
       -ms-flex-align: center;
           align-items: center;
   font-size: 13.5px;
+  height: 40px;
   color: #fff;
 }
 
@@ -311,11 +363,6 @@ body::-webkit-scrollbar-thumb {
   height: 24px;
   border-radius: 50%;
   margin-right: 24px;
-}
-
-.app .sidebar__item--link .stream_icon {
-  font-size: 14px;
-  color: red;
 }
 
 .app .sidebar h1 {
@@ -333,8 +380,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .app .content {
-  margin-left: 24rem;
+  margin-left: 7.2rem;
   margin-top: 56px;
+  width: calc(100% - 7.2rem);
+  -webkit-transition: all 50ms ease;
+  transition: all 50ms ease;
 }
 
 .app .content .categories {
@@ -427,7 +477,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   right: 5px;
   bottom: 5px;
-  padding: 0.1em 0.3em;
+  padding: 0.3em 0.5em;
   background: rgba(0, 0, 0, 0.85);
   color: #fff;
   border-radius: 0.3em;
@@ -499,7 +549,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .app .content .video__view::after {
-  content: "•";
+  content: '•';
   margin: 0 4px;
 }
 
