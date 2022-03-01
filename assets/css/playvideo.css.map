@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACd,MAAM,EAAE,iBAAiB;EACzB,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,eAAe;CAWvC;;AAdD,AAKE,eALa,CAKb,QAAQ,CAAC;EACP,OAAO,EAAE,aAAa;EACtB,WAAW,EAAE,KAAK;CACnB;;AARH,AAUE,eAVa,CAUb,IAAI,CAAC;EACH,OAAO,EAAE,aAAa;EACtB,WAAW,EAAE,KAAK;CACnB",
+    "sources": [
+        "../../sass/playvideo.scss"
+    ],
+    "names": [],
+    "file": "playvideo.css"
+}

@@ -41,6 +41,11 @@ body::-webkit-scrollbar-thumb {
       flex-wrap: wrap;
 }
 
+.app__container .separator {
+  margin: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .app .header {
   position: fixed;
   left: 0;
@@ -215,7 +220,7 @@ body::-webkit-scrollbar-thumb {
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   margin-left: 4px;
   cursor: pointer;
 }
@@ -373,12 +378,6 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
 }
 
-.app .sidebar .separator {
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .app .content {
   margin-left: 7.2rem;
   margin-top: 56px;
@@ -457,6 +456,17 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 40px;
 }
 
+.app .content .video__item:hover {
+  cursor: pointer;
+}
+
+.app .content .video__item:hover .video__button--more,
+.app .content .video__item:hover .video__more--option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .app .content .video__item .channel__icon-img {
   margin-right: 1.2rem;
   border-radius: 50%;
@@ -484,12 +494,111 @@ body::-webkit-scrollbar-thumb {
   font-size: 0.9em;
 }
 
+.app .content .video__more--option {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 1.8rem;
+  color: #fff;
+  gap: 4px;
+  display: none;
+}
+
+.app .content .video__more--option--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  padding-left: 0.4rem;
+  height: 28px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.app .content .video__more--option--text {
+  overflow: hidden;
+  width: 0;
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear;
+}
+
+.app .content .video__more--option ion-icon {
+  padding: 4px 4px;
+  background-color: rgba(0, 0, 0, 0.78);
+  border-radius: 2px;
+  font-size: 2rem;
+}
+
+.app .content .video__more--option ion-icon:hover ~ .video__more--option--text {
+  width: auto;
+}
+
+.app .content .video__more--list {
+  z-index: 3;
+  position: absolute;
+  top: 2.4rem;
+  left: 0.2rem;
+  background-color: #202020;
+  padding: 8px 0;
+  width: 27rem;
+  border-radius: 4px;
+  display: none;
+}
+
+.app .content .video__more--list.show {
+  display: block;
+}
+
+.app .content .video__more--list .separator {
+  margin: 4px 0;
+}
+
+.app .content .video__more--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.6rem;
+  padding: 0 3rem 0 1.6rem;
+  height: 3.6rem;
+  font-size: 1.3rem;
+}
+
+.app .content .video__more--item ion-icon {
+  font-size: 2.2rem;
+}
+
 .app .content .video__thumbnail-img {
   width: 100%;
   height: 100%;
 }
 
 .app .content .video__info {
+  position: relative;
   margin-top: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,7 +606,19 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-right: 2.4rem;
+}
+
+.app .content .video__button--more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.app .content .video__button--more.show {
+  display: block;
 }
 
 .app .content .video__details {
@@ -508,6 +629,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-right: 2.4rem;
 }
 
 .app .content .video__title {

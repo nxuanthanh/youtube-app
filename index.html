@@ -10,7 +10,8 @@
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Spline+Sans:wght@300&display=swap"
       rel="stylesheet"
@@ -109,7 +110,7 @@
                 <ion-icon name="videocam-outline"></ion-icon>
               </div>
               <div class="header__navbar--item header__navbar--app">
-                <ion-icon name="apps-outline"></ion-icon>
+                <ion-icon name="apps"></ion-icon>
               </div>
               <div class="header__navbar--item header__navbar--notify">
                 <ion-icon name="notifications-outline"></ion-icon>
@@ -128,7 +129,7 @@
           <ul class="sidebar__list-sm">
             <li class="sidebar__item active">
               <a href="#" class="sidebar__item--link">
-                <ion-icon name="home" class="visible"></ion-icon>
+                <ion-icon name="home-sharp" class="visible"></ion-icon>
                 <p class="sidebar__item--title">Trang chủ</p>
               </a>
             </li>
@@ -154,7 +155,7 @@
           <ul class="sidebar__list">
             <li class="sidebar__item active">
               <a href="#" class="sidebar__item--link">
-                <ion-icon name="home"></ion-icon>
+                <ion-icon name="home-sharp"></ion-icon>
                 <p class="sidebar__item--title">Trang chủ</p>
               </a>
             </li>
@@ -201,10 +202,16 @@
                 <p class="sidebar__item--title">Đã thích</p>
               </a>
             </li>
-            <li class="sidebar__item">
+            <li class="sidebar__item showmore">
               <a href="#" class="sidebar__item--link">
                 <ion-icon name="chevron-down-outline"></ion-icon>
                 <p class="sidebar__item--title">Thêm</p>
+              </a>
+            </li>
+            <li class="sidebar__item hideaway">
+              <a href="#" class="sidebar__item--link">
+                <ion-icon name="chevron-up-outline"></ion-icon>
+                <p class="sidebar__item--title">Ẩn bớt</p>
               </a>
             </li>
             <div class="separator"></div>
@@ -276,7 +283,7 @@
               </a>
             </li>
             <div class="separator"></div>
-            <h1 class="sidebar__topic">Dịch vụ khác của Youtube</h1>
+            <h1>Dịch vụ khác của Youtube</h1>
             <li class="sidebar__item">
               <a href="#" class="sidebar__item--link">
                 <ion-icon name="game-controller-outline"></ion-icon>
@@ -359,27 +366,83 @@
             <div class="row video__section">
               <div class="col l-3 m-4 video__item"></div>
               <div class="col l-3 m-4 video__item">
-                <a href="" data-duration="2:04" class="video__thumbnail"
-                  ><img src="./assets/images/thumbnail.png" class="video__thumbnail-img"
-                /></a>
+                <a href="./playVideo.html" data-duration="2:04" class="video__thumbnail"
+                  ><img src="./assets/images/hq720.webp" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <div class="video__more--option--list">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="video__more--option--text">Xem sau</p>
+                    </div>
+                    <div class="video__more--option--list">
+                      <ion-icon name="newspaper-outline"></ion-icon>
+                      <p class="video__more--option--text">Thêm vào danh sách chờ</p>
+                    </div class="video__more--option--list">
+                  </div>
+                </a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
-                    ><img src="./assets/images/yellow.jpg" alt="" class="channel__icon-img"
+                    ><img src="./assets/images/phephim.jpg" alt="" class="channel__icon-img"
                   /></a>
                   <div class="video__details">
-                    <a href="" class="video__title">Bad Guy [ Number Five ]</a>
-                    <a href="" class="video__channel-name">Yellow 358</a>
+                    <a href="" class="video__title">ANDREW GARFIELD: Từ NHÂN VIÊN STARBUCKS đến chủ nhân QUẢ CẦU VÀNG</a>
+                    <a href="" class="video__channel-name">Phê phim</a>
                     <div class="video__metadata">
-                      <span class="video__view">one year View</span>
-                      <span>3 hour ago</span>
+                      <span class="video__view">125K View</span>
+                      <span>10 hour ago</span>
                     </div>
+                  </div>
+                  <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical" class="video__button--more--icon"></ion-icon>
+
+                    <ul class="video__more--list">
+                      <li class="video__more--item">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                        <p class="video__more--title">
+                          Thêm vào danh sách chờ
+                        </p>
+                      </li>
+                      <li class="video__more--item">
+                        <ion-icon name="time-outline"></ion-icon>
+                        <p class="video__more--title">
+                          Lưu vào danh sách xem sau
+                        </p>
+                      </li>
+                      <li class="video__more--item">
+                        <ion-icon name="dice-outline"></ion-icon>
+                        <p class="video__more--title">
+                          Lưu vào danh sách phát
+                        </p>
+                      </li>
+                      <div class="separator"></div>
+                      <li class="video__more--item">
+                        <ion-icon name="ban-outline"></ion-icon>
+                        <p class="video__more--title">
+                          Không quan tâm
+                        </p>
+                      </li>
+                      <li class="video__more--item">
+                        <ion-icon name="remove-circle-outline"></ion-icon>
+                        <p class="video__more--title">
+                          Không đề xuất kênh này
+                        </p>
+                      </li>
+                      <li class="video__more--item">
+                        <ion-icon name="flag-outline"></ion-icon>
+                        <p class="video__more--title">
+                          Báo cáo vi phạm
+                        </p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="41:08" class="video__thumbnail"
-                  ><img src="./assets/images/mixiThumbnail.webp" class="video__thumbnail-img"
-                /></a>
+                  ><img src="./assets/images/mixiThumbnail.webp" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <ion-icon name="newspaper-outline"></ion-icon></div
+                ></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
                     ><img
@@ -398,12 +461,18 @@
                       <span>34 minute ago</span>
                     </div>
                   </div>
+                  <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                  </div>
                 </div>
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="6:50" class="video__thumbnail"
-                  ><img src="./assets/images/real.webp" class="video__thumbnail-img"
-                /></a>
+                  ><img src="./assets/images/real.webp" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <ion-icon name="newspaper-outline"></ion-icon></div
+                ></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
                     ><img src="./assets/images/laliga.jpg" alt="" class="channel__icon-img"
@@ -419,12 +488,18 @@
                       <span>10 day ago</span>
                     </div>
                   </div>
+                  <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                  </div>
                 </div>
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="8:27" class="video__thumbnail"
-                  ><img src="./assets/images/playah.webp" class="video__thumbnail-img"
-                /></a>
+                  ><img src="./assets/images/playah.webp" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <ion-icon name="newspaper-outline"></ion-icon></div
+                ></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
                     ><img src="./assets/images/soobin.jpg" alt="" class="channel__icon-img"
@@ -442,12 +517,18 @@
                       <span>7 month ago</span>
                     </div>
                   </div>
+                  <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                  </div>
                 </div>
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="12:24" class="video__thumbnail"
-                  ><img src="./assets/images/dungct.webp" class="video__thumbnail-img"
-                /></a>
+                  ><img src="./assets/images/dungct.webp" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <ion-icon name="newspaper-outline"></ion-icon></div
+                ></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
                     ><img src="./assets/images/ttgame.jpg" alt="" class="channel__icon-img"
@@ -468,12 +549,18 @@
                       <span>3 hour ago</span>
                     </div>
                   </div>
+                  <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                  </div>
                 </div>
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="3:55" class="video__thumbnail"
-                  ><img src="./assets/images/tunaThumb.jpg" class="video__thumbnail-img"
-                /></a>
+                  ><img src="./assets/images/tunaThumb.jpg" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <ion-icon name="newspaper-outline"></ion-icon></div
+                ></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
                     ><img src="./assets/images/tuna.jpg" alt="" class="channel__icon-img"
@@ -488,12 +575,18 @@
                       <span>one year ago</span>
                     </div>
                   </div>
+                  <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                  </div>
                 </div>
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="12:24" class="video__thumbnail"
-                  ><img src="./assets/images/lòi.jpg" class="video__thumbnail-img"
-                /></a>
+                  ><img src="./assets/images/lòi.jpg" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <ion-icon name="newspaper-outline"></ion-icon></div
+                ></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
                     ><img src="./assets/images/lofiChannel.jpg" alt="" class="channel__icon-img"
@@ -507,15 +600,21 @@
                       <span class="video__view">1.4K watching</span>
                     </div>
                     <div class="video__live">
-                      <p class="live__Text">Trực tiếp</p>
+                      <p class="live__Text">Trự
+                        <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                  </div>c tiếp</p>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="13:10" class="video__thumbnail"
-                  ><img src="./assets/images/api.jpg" class="video__thumbnail-img"
-                /></a>
+                  ><img src="./assets/images/api.jpg" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <ion-icon name="newspaper-outline"></ion-icon></div
+                ></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
                     ><img src="./assets/images/fireship.jpg" alt="" class="channel__icon-img"
@@ -528,12 +627,18 @@
                       <span>3 months ago</span>
                     </div>
                   </div>
+                  <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                  </div>
                 </div>
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="7:59" class="video__thumbnail"
-                  ><img src="./assets/images/metro.jpg" class="video__thumbnail-img"
-                /></a>
+                  ><img src="./assets/images/metro.jpg" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <ion-icon name="newspaper-outline"></ion-icon></div
+                ></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
                     ><img src="./assets/images/spideroom.jpg" alt="" class="channel__icon-img"
@@ -548,12 +653,18 @@
                       <span>3 days ago</span>
                     </div>
                   </div>
+                  <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                  </div>
                 </div>
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="40:01" class="video__thumbnail"
-                  ><img src="./assets/images/china.jpg" class="video__thumbnail-img"
-                /></a>
+                  ><img src="./assets/images/china.jpg" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <ion-icon name="newspaper-outline"></ion-icon></div
+                ></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
                     ><img src="./assets/images/vifacts.jpg" alt="" class="channel__icon-img"
@@ -568,12 +679,18 @@
                       <span>3 year ago</span>
                     </div>
                   </div>
+                  <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                  </div>
                 </div>
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="13:42" class="video__thumbnail"
-                  ><img src="./assets/images/cang.jpg" class="video__thumbnail-img"
-                /></a>
+                  ><img src="./assets/images/cang.jpg" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <ion-icon name="newspaper-outline"></ion-icon></div
+                ></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
                     ><img src="./assets/images/bactery.jpg" alt="" class="channel__icon-img"
@@ -588,12 +705,18 @@
                       <span>10days ago</span>
                     </div>
                   </div>
+                  <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                  </div>
                 </div>
               </div>
               <div class="col l-3 m-4 video__item">
                 <a href="" data-duration="7:06" class="video__thumbnail"
-                  ><img src="./assets/images/foot.jpg" class="video__thumbnail-img"
-                /></a>
+                  ><img src="./assets/images/foot.jpg" class="video__thumbnail-img" />
+                  <div class="video__more--option">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <ion-icon name="newspaper-outline"></ion-icon></div
+                ></a>
                 <div class="video__info">
                   <a href="" class="channel__icon"
                     ><img src="./assets/images/dratteling.jpg" alt="" class="channel__icon-img"
@@ -605,6 +728,9 @@
                       <span class="video__view">2.3M View</span>
                       <span>5 days ago</span>
                     </div>
+                  </div>
+                  <div class="video__button--more">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
                   </div>
                 </div>
               </div>

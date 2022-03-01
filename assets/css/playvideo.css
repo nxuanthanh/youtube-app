@@ -1,0 +1,22 @@
+.video__content {
+  margin: 5.6rem 0 0 3.6rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+}
+
+.video__content .vietnam {
+  padding: 24px 24px 0 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1 / 8;
+}
+
+.video__content .usa {
+  padding: 24px 24px 0 0;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 3;
+  grid-column: 8/ 11;
+}
+/*# sourceMappingURL=playvideo.css.map */
